@@ -67,9 +67,6 @@ def compute(x, w_info, w_phrase, uni_bigrams, uni_unigrams, bigrams_fg, bigrams_
     i = KL(p1, p2)
     return (w1 +'-'+w2, w_phrase*p + w_info*i)
 
-def f(x):
-    print x
-
 def  main(argv):
     # parse args
     fg_year = int(argv[1])
@@ -85,26 +82,28 @@ def  main(argv):
     conf = SparkConf().setMaster('local[{}]'.format(n_workers))  \
                       .setAppName(argv[0])
     sc = SparkContext(conf=conf)
-    sc.parallelize([1, 2, 3, 4, 5]).foreach(lambda x: f(x))
-	
+    #global counter
+    #counter = 0
+    #sc.parallelize([1, 2, 3, 4, 5]).foreach(lambda x: f())
+
     # TODO: start your code here
     stopwords = sc.textFile(f_stopwords).collect()
     unigrams = sc.textFile(f_unigrams).collect()
-    
+	  
     # get bigrams RDD in form of (bigram, fgCount, bgCount)
     bigrams = sc.textFile(f_bigrams)
     bigrams2 = bigrams.map(lambda line: process(line, fg_year, stopwords)).filter(lambda x: x != None)
-    bigrams3 = bigrams2.reduceByKey(lambda x, y: (x[0]+y[0], x[1]+y[1])).map(lambda x: word_key(x)).cache()
+    bigrams3 = bigrams2.reduceByKey(lambda x, y: (x[0]+y[0], x[1]+y[1]), numPartitions=n_workers).map(lambda x: word_key(x)).cache()
     uni_bigrams = bigrams3.count()
     (bigrams_fg, bigrams_bg) = bigrams3.map(lambda x: (x[1][1][0], x[1][1][1])).reduce(lambda x, y: (x[0]+y[0], x[1]+y[1]))
-    
+  
     # get unigrams RDD in form of (unigram, fgCount, bgCount)
     unigrams = sc.textFile(f_unigrams)
     unigrams2 = unigrams.map(lambda line: process2(line, fg_year, stopwords)).filter(lambda x: x != None)
-    unigrams3 = unigrams2.reduceByKey(add).cache()
+    unigrams3 = unigrams2.reduceByKey(add, numPartitions=n_workers).cache()
     uni_unigrams = unigrams3.count()
     unigrams_fg = unigrams3.map(lambda x: x[1]).reduce(add)
-    
+  
     # generate RDD (word1, word2, word1_fg, word2_fg, bigrams_fg, bigrams_bg)
     word1 = bigrams3.leftOuterJoin(unigrams3).map(lambda x: zero(x))
     word2 = word1.leftOuterJoin(unigrams3).map(lambda x: zero2(x))
