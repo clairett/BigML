@@ -1,0 +1,496 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/11/29 03:04:23 INFO SparkContext: Running Spark version 1.5.1
+16/11/29 03:04:24 INFO SecurityManager: Changing view acls to: ttian1
+16/11/29 03:04:24 INFO SecurityManager: Changing modify acls to: ttian1
+16/11/29 03:04:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(ttian1); users with modify permissions: Set(ttian1)
+16/11/29 03:04:24 INFO Slf4jLogger: Slf4jLogger started
+16/11/29 03:04:24 INFO Remoting: Starting remoting
+16/11/29 03:04:24 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@128.2.13.145:45523]
+16/11/29 03:04:24 INFO Utils: Successfully started service 'sparkDriver' on port 45523.
+16/11/29 03:04:24 INFO SparkEnv: Registering MapOutputTracker
+16/11/29 03:04:24 INFO SparkEnv: Registering BlockManagerMaster
+16/11/29 03:04:24 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-2748bf4b-33f4-419c-932b-748fa0e27a0e
+16/11/29 03:04:24 INFO MemoryStore: MemoryStore started with capacity 1060.0 MB
+16/11/29 03:04:24 INFO HttpFileServer: HTTP File server directory is /tmp/spark-5f16afb2-3808-4419-aa37-57df499baa70/httpd-15971287-da1f-4e88-9b31-2277a75aac02
+16/11/29 03:04:24 INFO HttpServer: Starting HTTP Server
+16/11/29 03:04:24 INFO Utils: Successfully started service 'HTTP file server' on port 37864.
+16/11/29 03:04:24 INFO SparkEnv: Registering OutputCommitCoordinator
+16/11/29 03:04:24 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+16/11/29 03:04:24 INFO SparkUI: Started SparkUI at http://128.2.13.145:4040
+16/11/29 03:04:24 INFO Utils: Copying /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py to /tmp/spark-5f16afb2-3808-4419-aa37-57df499baa70/userFiles-8025acbe-db23-4136-ad6a-b157ca972f37/pf.py
+16/11/29 03:04:24 INFO SparkContext: Added file file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py at file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py with timestamp 1480406664889
+16/11/29 03:04:24 WARN MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+16/11/29 03:04:24 INFO Executor: Starting executor ID driver on host localhost
+16/11/29 03:04:25 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43458.
+16/11/29 03:04:25 INFO NettyBlockTransferService: Server created on 43458
+16/11/29 03:04:25 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/29 03:04:25 INFO BlockManagerMasterEndpoint: Registering block manager localhost:43458 with 1060.0 MB RAM, BlockManagerId(driver, localhost, 43458)
+16/11/29 03:04:25 INFO BlockManagerMaster: Registered BlockManager
+16/11/29 03:04:25 INFO MemoryStore: ensureFreeSpace(45680) called with curMem=0, maxMem=1111511531
+16/11/29 03:04:25 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 44.6 KB, free 1060.0 MB)
+16/11/29 03:04:25 INFO MemoryStore: ensureFreeSpace(4251) called with curMem=45680, maxMem=1111511531
+16/11/29 03:04:25 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 4.2 KB, free 1060.0 MB)
+16/11/29 03:04:25 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:43458 (size: 4.2 KB, free: 1060.0 MB)
+16/11/29 03:04:25 INFO SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:-2
+16/11/29 03:04:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/11/29 03:04:25 WARN LoadSnappy: Snappy native library not loaded
+16/11/29 03:04:25 INFO FileInputFormat: Total input paths to process : 1
+16/11/29 03:04:25 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:89
+16/11/29 03:04:25 INFO DAGScheduler: Got job 0 (collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:89) with 2 output partitions
+16/11/29 03:04:25 INFO DAGScheduler: Final stage: ResultStage 0(collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:89)
+16/11/29 03:04:25 INFO DAGScheduler: Parents of final stage: List()
+16/11/29 03:04:25 INFO DAGScheduler: Missing parents: List()
+16/11/29 03:04:25 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at textFile at NativeMethodAccessorImpl.java:-2), which has no missing parents
+16/11/29 03:04:25 INFO MemoryStore: ensureFreeSpace(3128) called with curMem=49931, maxMem=1111511531
+16/11/29 03:04:25 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.1 KB, free 1060.0 MB)
+16/11/29 03:04:25 INFO MemoryStore: ensureFreeSpace(1790) called with curMem=53059, maxMem=1111511531
+16/11/29 03:04:25 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1790.0 B, free 1060.0 MB)
+16/11/29 03:04:25 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:43458 (size: 1790.0 B, free: 1060.0 MB)
+16/11/29 03:04:25 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:25 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at textFile at NativeMethodAccessorImpl.java:-2)
+16/11/29 03:04:25 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+16/11/29 03:04:25 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 2257 bytes)
+16/11/29 03:04:25 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 2257 bytes)
+16/11/29 03:04:25 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+16/11/29 03:04:25 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+16/11/29 03:04:25 INFO Executor: Fetching file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py with timestamp 1480406664889
+16/11/29 03:04:25 INFO Utils: /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py has been previously copied to /tmp/spark-5f16afb2-3808-4419-aa37-57df499baa70/userFiles-8025acbe-db23-4136-ad6a-b157ca972f37/pf.py
+16/11/29 03:04:25 INFO HadoopRDD: Input split: file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/data/stopwords.txt:959+959
+16/11/29 03:04:25 INFO HadoopRDD: Input split: file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/data/stopwords.txt:0+959
+16/11/29 03:04:25 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 3317 bytes result sent to driver
+16/11/29 03:04:25 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 3343 bytes result sent to driver
+16/11/29 03:04:25 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 71 ms on localhost (1/2)
+16/11/29 03:04:25 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 85 ms on localhost (2/2)
+16/11/29 03:04:25 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+16/11/29 03:04:25 INFO DAGScheduler: ResultStage 0 (collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:89) finished in 0.094 s
+16/11/29 03:04:25 INFO DAGScheduler: Job 0 finished: collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:89, took 0.148891 s
+16/11/29 03:04:25 INFO MemoryStore: ensureFreeSpace(45752) called with curMem=54849, maxMem=1111511531
+16/11/29 03:04:25 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 44.7 KB, free 1059.9 MB)
+16/11/29 03:04:25 INFO MemoryStore: ensureFreeSpace(4251) called with curMem=100601, maxMem=1111511531
+16/11/29 03:04:25 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.2 KB, free 1059.9 MB)
+16/11/29 03:04:25 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:43458 (size: 4.2 KB, free: 1060.0 MB)
+16/11/29 03:04:25 INFO SparkContext: Created broadcast 2 from textFile at NativeMethodAccessorImpl.java:-2
+16/11/29 03:04:25 INFO FileInputFormat: Total input paths to process : 1
+16/11/29 03:04:25 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:90
+16/11/29 03:04:25 INFO DAGScheduler: Got job 1 (collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:90) with 2 output partitions
+16/11/29 03:04:25 INFO DAGScheduler: Final stage: ResultStage 1(collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:90)
+16/11/29 03:04:25 INFO DAGScheduler: Parents of final stage: List()
+16/11/29 03:04:25 INFO DAGScheduler: Missing parents: List()
+16/11/29 03:04:25 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at textFile at NativeMethodAccessorImpl.java:-2), which has no missing parents
+16/11/29 03:04:25 INFO MemoryStore: ensureFreeSpace(3128) called with curMem=104852, maxMem=1111511531
+16/11/29 03:04:25 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.1 KB, free 1059.9 MB)
+16/11/29 03:04:25 INFO MemoryStore: ensureFreeSpace(1797) called with curMem=107980, maxMem=1111511531
+16/11/29 03:04:25 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 1797.0 B, free 1059.9 MB)
+16/11/29 03:04:25 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:43458 (size: 1797.0 B, free: 1060.0 MB)
+16/11/29 03:04:25 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:25 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at textFile at NativeMethodAccessorImpl.java:-2)
+16/11/29 03:04:25 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+16/11/29 03:04:25 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, PROCESS_LOCAL, 2259 bytes)
+16/11/29 03:04:25 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, PROCESS_LOCAL, 2259 bytes)
+16/11/29 03:04:25 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+16/11/29 03:04:25 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+16/11/29 03:04:25 INFO HadoopRDD: Input split: file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/data/unigram_war.txt:0+488504
+16/11/29 03:04:25 INFO HadoopRDD: Input split: file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/data/unigram_war.txt:488504+488504
+16/11/29 03:04:25 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 542021 bytes result sent to driver
+16/11/29 03:04:25 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 542962 bytes result sent to driver
+16/11/29 03:04:25 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 153 ms on localhost (1/2)
+16/11/29 03:04:25 INFO DAGScheduler: ResultStage 1 (collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:90) finished in 0.154 s
+16/11/29 03:04:25 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 153 ms on localhost (2/2)
+16/11/29 03:04:25 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+16/11/29 03:04:25 INFO DAGScheduler: Job 1 finished: collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:90, took 0.162992 s
+16/11/29 03:04:26 INFO MemoryStore: ensureFreeSpace(45752) called with curMem=109777, maxMem=1111511531
+16/11/29 03:04:26 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 44.7 KB, free 1059.9 MB)
+16/11/29 03:04:26 INFO MemoryStore: ensureFreeSpace(4251) called with curMem=155529, maxMem=1111511531
+16/11/29 03:04:26 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.2 KB, free 1059.9 MB)
+16/11/29 03:04:26 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:43458 (size: 4.2 KB, free: 1060.0 MB)
+16/11/29 03:04:26 INFO SparkContext: Created broadcast 4 from textFile at NativeMethodAccessorImpl.java:-2
+16/11/29 03:04:26 INFO FileInputFormat: Total input paths to process : 1
+16/11/29 03:04:26 INFO SparkContext: Starting job: count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:96
+16/11/29 03:04:26 INFO DAGScheduler: Registering RDD 7 (reduceByKey at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:95)
+16/11/29 03:04:26 INFO DAGScheduler: Got job 2 (count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:96) with 2 output partitions
+16/11/29 03:04:26 INFO DAGScheduler: Final stage: ResultStage 3(count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:96)
+16/11/29 03:04:26 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+16/11/29 03:04:26 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+16/11/29 03:04:26 INFO DAGScheduler: Submitting ShuffleMapStage 2 (PairwiseRDD[7] at reduceByKey at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:95), which has no missing parents
+16/11/29 03:04:26 INFO MemoryStore: ensureFreeSpace(13680) called with curMem=159780, maxMem=1111511531
+16/11/29 03:04:26 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 13.4 KB, free 1059.9 MB)
+16/11/29 03:04:26 INFO MemoryStore: ensureFreeSpace(8813) called with curMem=173460, maxMem=1111511531
+16/11/29 03:04:26 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 8.6 KB, free 1059.8 MB)
+16/11/29 03:04:26 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:43458 (size: 8.6 KB, free: 1060.0 MB)
+16/11/29 03:04:26 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:26 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (PairwiseRDD[7] at reduceByKey at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:95)
+16/11/29 03:04:26 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks
+16/11/29 03:04:26 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4, localhost, PROCESS_LOCAL, 2247 bytes)
+16/11/29 03:04:26 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5, localhost, PROCESS_LOCAL, 2247 bytes)
+16/11/29 03:04:26 INFO Executor: Running task 0.0 in stage 2.0 (TID 4)
+16/11/29 03:04:26 INFO Executor: Running task 1.0 in stage 2.0 (TID 5)
+16/11/29 03:04:26 INFO HadoopRDD: Input split: file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/data/bigram_war.txt:0+600942
+16/11/29 03:04:26 INFO HadoopRDD: Input split: file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/data/bigram_war.txt:600942+600942
+16/11/29 03:04:27 INFO PythonRunner: Times: total = 932, boot = 179, init = 10, finish = 743
+16/11/29 03:04:27 INFO Executor: Finished task 1.0 in stage 2.0 (TID 5). 2318 bytes result sent to driver
+16/11/29 03:04:27 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 957 ms on localhost (1/2)
+16/11/29 03:04:27 INFO PythonRunner: Times: total = 932, boot = 178, init = 12, finish = 742
+16/11/29 03:04:27 INFO Executor: Finished task 0.0 in stage 2.0 (TID 4). 2318 bytes result sent to driver
+16/11/29 03:04:27 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 985 ms on localhost (2/2)
+16/11/29 03:04:27 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+16/11/29 03:04:27 INFO DAGScheduler: ShuffleMapStage 2 (reduceByKey at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:95) finished in 0.986 s
+16/11/29 03:04:27 INFO DAGScheduler: looking for newly runnable stages
+16/11/29 03:04:27 INFO DAGScheduler: running: Set()
+16/11/29 03:04:27 INFO DAGScheduler: waiting: Set(ResultStage 3)
+16/11/29 03:04:27 INFO DAGScheduler: failed: Set()
+16/11/29 03:04:27 INFO DAGScheduler: Missing parents for ResultStage 3: List()
+16/11/29 03:04:27 INFO DAGScheduler: Submitting ResultStage 3 (PythonRDD[11] at count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:96), which is now runnable
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(7456) called with curMem=182273, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 7.3 KB, free 1059.8 MB)
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(4244) called with curMem=189729, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 4.1 KB, free 1059.8 MB)
+16/11/29 03:04:27 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on localhost:43458 (size: 4.1 KB, free: 1060.0 MB)
+16/11/29 03:04:27 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:27 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 3 (PythonRDD[11] at count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:96)
+16/11/29 03:04:27 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks
+16/11/29 03:04:27 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:27 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:27 INFO Executor: Running task 1.0 in stage 3.0 (TID 7)
+16/11/29 03:04:27 INFO Executor: Running task 0.0 in stage 3.0 (TID 6)
+16/11/29 03:04:27 INFO CacheManager: Partition rdd_10_1 not found, computing it
+16/11/29 03:04:27 INFO CacheManager: Partition rdd_10_0 not found, computing it
+16/11/29 03:04:27 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/11/29 03:04:27 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/11/29 03:04:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+16/11/29 03:04:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+16/11/29 03:04:27 INFO PythonRunner: Times: total = 40, boot = -81, init = 86, finish = 35
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(165267) called with curMem=193973, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block rdd_10_1 stored as bytes in memory (estimated size 161.4 KB, free 1059.7 MB)
+16/11/29 03:04:27 INFO BlockManagerInfo: Added rdd_10_1 in memory on localhost:43458 (size: 161.4 KB, free: 1059.8 MB)
+16/11/29 03:04:27 INFO PythonRunner: Times: total = 47, boot = -81, init = 86, finish = 42
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(166584) called with curMem=359240, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block rdd_10_0 stored as bytes in memory (estimated size 162.7 KB, free 1059.5 MB)
+16/11/29 03:04:27 INFO BlockManagerInfo: Added rdd_10_0 in memory on localhost:43458 (size: 162.7 KB, free: 1059.7 MB)
+16/11/29 03:04:27 INFO PythonRunner: Times: total = 7, boot = 0, init = 1, finish = 6
+16/11/29 03:04:27 INFO Executor: Finished task 0.0 in stage 3.0 (TID 6). 1826 bytes result sent to driver
+16/11/29 03:04:27 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 88 ms on localhost (1/2)
+16/11/29 03:04:27 INFO PythonRunner: Times: total = 43, boot = -1, init = 2, finish = 42
+16/11/29 03:04:27 INFO Executor: Finished task 1.0 in stage 3.0 (TID 7). 1826 bytes result sent to driver
+16/11/29 03:04:27 INFO DAGScheduler: ResultStage 3 (count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:96) finished in 0.116 s
+16/11/29 03:04:27 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 114 ms on localhost (2/2)
+16/11/29 03:04:27 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+16/11/29 03:04:27 INFO DAGScheduler: Job 2 finished: count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:96, took 1.145793 s
+16/11/29 03:04:27 INFO SparkContext: Starting job: reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:97
+16/11/29 03:04:27 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 152 bytes
+16/11/29 03:04:27 INFO DAGScheduler: Got job 3 (reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:97) with 2 output partitions
+16/11/29 03:04:27 INFO DAGScheduler: Final stage: ResultStage 5(reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:97)
+16/11/29 03:04:27 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 4)
+16/11/29 03:04:27 INFO DAGScheduler: Missing parents: List()
+16/11/29 03:04:27 INFO DAGScheduler: Submitting ResultStage 5 (PythonRDD[12] at reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:97), which has no missing parents
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(7464) called with curMem=525824, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 7.3 KB, free 1059.5 MB)
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(4208) called with curMem=533288, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 4.1 KB, free 1059.5 MB)
+16/11/29 03:04:27 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on localhost:43458 (size: 4.1 KB, free: 1059.7 MB)
+16/11/29 03:04:27 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:27 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 5 (PythonRDD[12] at reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:97)
+16/11/29 03:04:27 INFO TaskSchedulerImpl: Adding task set 5.0 with 2 tasks
+16/11/29 03:04:27 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 8, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:27 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 9, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:27 INFO Executor: Running task 0.0 in stage 5.0 (TID 8)
+16/11/29 03:04:27 INFO Executor: Running task 1.0 in stage 5.0 (TID 9)
+16/11/29 03:04:27 INFO BlockManager: Found block rdd_10_1 locally
+16/11/29 03:04:27 INFO BlockManager: Found block rdd_10_0 locally
+16/11/29 03:04:27 INFO PythonRunner: Times: total = 13, boot = -58, init = 60, finish = 11
+16/11/29 03:04:27 INFO PythonRunner: Times: total = 13, boot = -26, init = 29, finish = 10
+16/11/29 03:04:27 INFO Executor: Finished task 1.0 in stage 5.0 (TID 9). 2135 bytes result sent to driver
+16/11/29 03:04:27 INFO Executor: Finished task 0.0 in stage 5.0 (TID 8). 2135 bytes result sent to driver
+16/11/29 03:04:27 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 9) in 18 ms on localhost (1/2)
+16/11/29 03:04:27 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 8) in 20 ms on localhost (2/2)
+16/11/29 03:04:27 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+16/11/29 03:04:27 INFO DAGScheduler: ResultStage 5 (reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:97) finished in 0.020 s
+16/11/29 03:04:27 INFO DAGScheduler: Job 3 finished: reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:97, took 0.033324 s
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(45752) called with curMem=537496, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 44.7 KB, free 1059.5 MB)
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(4251) called with curMem=583248, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 4.2 KB, free 1059.5 MB)
+16/11/29 03:04:27 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on localhost:43458 (size: 4.2 KB, free: 1059.7 MB)
+16/11/29 03:04:27 INFO SparkContext: Created broadcast 8 from textFile at NativeMethodAccessorImpl.java:-2
+16/11/29 03:04:27 INFO FileInputFormat: Total input paths to process : 1
+16/11/29 03:04:27 INFO SparkContext: Starting job: count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:103
+16/11/29 03:04:27 INFO DAGScheduler: Registering RDD 16 (reduceByKey at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:102)
+16/11/29 03:04:27 INFO DAGScheduler: Got job 4 (count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:103) with 2 output partitions
+16/11/29 03:04:27 INFO DAGScheduler: Final stage: ResultStage 7(count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:103)
+16/11/29 03:04:27 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 6)
+16/11/29 03:04:27 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 6)
+16/11/29 03:04:27 INFO DAGScheduler: Submitting ShuffleMapStage 6 (PairwiseRDD[16] at reduceByKey at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:102), which has no missing parents
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(13432) called with curMem=587499, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 13.1 KB, free 1059.4 MB)
+16/11/29 03:04:27 INFO MemoryStore: ensureFreeSpace(8660) called with curMem=600931, maxMem=1111511531
+16/11/29 03:04:27 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 8.5 KB, free 1059.4 MB)
+16/11/29 03:04:27 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on localhost:43458 (size: 8.5 KB, free: 1059.7 MB)
+16/11/29 03:04:27 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:27 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 6 (PairwiseRDD[16] at reduceByKey at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:102)
+16/11/29 03:04:27 INFO TaskSchedulerImpl: Adding task set 6.0 with 2 tasks
+16/11/29 03:04:27 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 10, localhost, PROCESS_LOCAL, 2248 bytes)
+16/11/29 03:04:27 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 11, localhost, PROCESS_LOCAL, 2248 bytes)
+16/11/29 03:04:27 INFO Executor: Running task 0.0 in stage 6.0 (TID 10)
+16/11/29 03:04:27 INFO Executor: Running task 1.0 in stage 6.0 (TID 11)
+16/11/29 03:04:27 INFO HadoopRDD: Input split: file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/data/unigram_war.txt:488504+488504
+16/11/29 03:04:27 INFO HadoopRDD: Input split: file:/afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/data/unigram_war.txt:0+488504
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 405, boot = -52, init = 57, finish = 400
+16/11/29 03:04:28 INFO Executor: Finished task 1.0 in stage 6.0 (TID 11). 2318 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 11) in 415 ms on localhost (1/2)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 431, boot = -53, init = 59, finish = 425
+16/11/29 03:04:28 INFO Executor: Finished task 0.0 in stage 6.0 (TID 10). 2318 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 10) in 441 ms on localhost (2/2)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+16/11/29 03:04:28 INFO DAGScheduler: ShuffleMapStage 6 (reduceByKey at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:102) finished in 0.442 s
+16/11/29 03:04:28 INFO DAGScheduler: looking for newly runnable stages
+16/11/29 03:04:28 INFO DAGScheduler: running: Set()
+16/11/29 03:04:28 INFO DAGScheduler: waiting: Set(ResultStage 7)
+16/11/29 03:04:28 INFO DAGScheduler: failed: Set()
+16/11/29 03:04:28 INFO DAGScheduler: Missing parents for ResultStage 7: List()
+16/11/29 03:04:28 INFO DAGScheduler: Submitting ResultStage 7 (PythonRDD[20] at count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:103), which is now runnable
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(6544) called with curMem=609591, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 6.4 KB, free 1059.4 MB)
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(3780) called with curMem=616135, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 3.7 KB, free 1059.4 MB)
+16/11/29 03:04:28 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on localhost:43458 (size: 3.7 KB, free: 1059.7 MB)
+16/11/29 03:04:28 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:28 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 7 (PythonRDD[20] at count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:103)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Adding task set 7.0 with 2 tasks
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 12, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 13, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO Executor: Running task 0.0 in stage 7.0 (TID 12)
+16/11/29 03:04:28 INFO Executor: Running task 1.0 in stage 7.0 (TID 13)
+16/11/29 03:04:28 INFO CacheManager: Partition rdd_19_1 not found, computing it
+16/11/29 03:04:28 INFO CacheManager: Partition rdd_19_0 not found, computing it
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 12, boot = -31, init = 32, finish = 11
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 13, boot = -6, init = 8, finish = 11
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(103080) called with curMem=619915, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block rdd_19_1 stored as bytes in memory (estimated size 100.7 KB, free 1059.3 MB)
+16/11/29 03:04:28 INFO BlockManagerInfo: Added rdd_19_1 in memory on localhost:43458 (size: 100.7 KB, free: 1059.6 MB)
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(104086) called with curMem=722995, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block rdd_19_0 stored as bytes in memory (estimated size 101.6 KB, free 1059.2 MB)
+16/11/29 03:04:28 INFO BlockManagerInfo: Added rdd_19_0 in memory on localhost:43458 (size: 101.6 KB, free: 1059.5 MB)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 3, boot = 0, init = 0, finish = 3
+16/11/29 03:04:28 INFO Executor: Finished task 1.0 in stage 7.0 (TID 13). 1826 bytes result sent to driver
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 3, boot = 0, init = 0, finish = 3
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 13) in 24 ms on localhost (1/2)
+16/11/29 03:04:28 INFO Executor: Finished task 0.0 in stage 7.0 (TID 12). 1826 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 12) in 25 ms on localhost (2/2)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+16/11/29 03:04:28 INFO DAGScheduler: ResultStage 7 (count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:103) finished in 0.025 s
+16/11/29 03:04:28 INFO DAGScheduler: Job 4 finished: count at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:103, took 0.481025 s
+16/11/29 03:04:28 INFO SparkContext: Starting job: reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:104
+16/11/29 03:04:28 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 152 bytes
+16/11/29 03:04:28 INFO DAGScheduler: Got job 5 (reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:104) with 2 output partitions
+16/11/29 03:04:28 INFO DAGScheduler: Final stage: ResultStage 9(reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:104)
+16/11/29 03:04:28 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 8)
+16/11/29 03:04:28 INFO DAGScheduler: Missing parents: List()
+16/11/29 03:04:28 INFO DAGScheduler: Submitting ResultStage 9 (PythonRDD[21] at reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:104), which has no missing parents
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(6368) called with curMem=827081, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 6.2 KB, free 1059.2 MB)
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(3741) called with curMem=833449, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 3.7 KB, free 1059.2 MB)
+16/11/29 03:04:28 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:43458 (size: 3.7 KB, free: 1059.5 MB)
+16/11/29 03:04:28 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:28 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 9 (PythonRDD[21] at reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:104)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Adding task set 9.0 with 2 tasks
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 14, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 15, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO Executor: Running task 1.0 in stage 9.0 (TID 15)
+16/11/29 03:04:28 INFO Executor: Running task 0.0 in stage 9.0 (TID 14)
+16/11/29 03:04:28 INFO BlockManager: Found block rdd_19_1 locally
+16/11/29 03:04:28 INFO BlockManager: Found block rdd_19_0 locally
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 6, boot = -40, init = 42, finish = 4
+16/11/29 03:04:28 INFO Executor: Finished task 1.0 in stage 9.0 (TID 15). 2134 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 15) in 11 ms on localhost (1/2)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 42, boot = -42, init = 43, finish = 41
+16/11/29 03:04:28 INFO Executor: Finished task 0.0 in stage 9.0 (TID 14). 2134 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 14) in 48 ms on localhost (2/2)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+16/11/29 03:04:28 INFO DAGScheduler: ResultStage 9 (reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:104) finished in 0.048 s
+16/11/29 03:04:28 INFO DAGScheduler: Job 5 finished: reduce at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:104, took 0.062170 s
+16/11/29 03:04:28 INFO SparkContext: Starting job: collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:112
+16/11/29 03:04:28 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 152 bytes
+16/11/29 03:04:28 INFO DAGScheduler: Registering RDD 26 (leftOuterJoin at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:107)
+16/11/29 03:04:28 INFO DAGScheduler: Registering RDD 33 (leftOuterJoin at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:108)
+16/11/29 03:04:28 INFO DAGScheduler: Got job 6 (collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:112) with 6 output partitions
+16/11/29 03:04:28 INFO DAGScheduler: Final stage: ResultStage 15(collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:112)
+16/11/29 03:04:28 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 14)
+16/11/29 03:04:28 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 14)
+16/11/29 03:04:28 INFO DAGScheduler: Submitting ShuffleMapStage 12 (PairwiseRDD[26] at leftOuterJoin at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:107), which has no missing parents
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(13224) called with curMem=837190, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 12.9 KB, free 1059.2 MB)
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(6488) called with curMem=850414, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 6.3 KB, free 1059.2 MB)
+16/11/29 03:04:28 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on localhost:43458 (size: 6.3 KB, free: 1059.4 MB)
+16/11/29 03:04:28 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:28 INFO DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 12 (PairwiseRDD[26] at leftOuterJoin at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:107)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Adding task set 12.0 with 4 tasks
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 16, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 17, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 2.0 in stage 12.0 (TID 18, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 3.0 in stage 12.0 (TID 19, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO Executor: Running task 0.0 in stage 12.0 (TID 16)
+16/11/29 03:04:28 INFO Executor: Running task 1.0 in stage 12.0 (TID 17)
+16/11/29 03:04:28 INFO Executor: Running task 2.0 in stage 12.0 (TID 18)
+16/11/29 03:04:28 INFO Executor: Running task 3.0 in stage 12.0 (TID 19)
+16/11/29 03:04:28 INFO BlockManager: Found block rdd_10_0 locally
+16/11/29 03:04:28 INFO BlockManager: Found block rdd_19_0 locally
+16/11/29 03:04:28 INFO BlockManager: Found block rdd_10_1 locally
+16/11/29 03:04:28 INFO BlockManager: Found block rdd_19_1 locally
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 17, boot = 3, init = 1, finish = 13
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 26, boot = -105, init = 107, finish = 24
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 30, boot = 2, init = 1, finish = 27
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 13, boot = -68, init = 70, finish = 11
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 36, boot = 2, init = 2, finish = 32
+16/11/29 03:04:28 INFO Executor: Finished task 3.0 in stage 12.0 (TID 19). 2320 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 3.0 in stage 12.0 (TID 19) in 99 ms on localhost (1/4)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 49, boot = 2, init = 13, finish = 34
+16/11/29 03:04:28 INFO Executor: Finished task 0.0 in stage 12.0 (TID 16). 2320 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 16) in 107 ms on localhost (2/4)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 51, boot = 2, init = 13, finish = 36
+16/11/29 03:04:28 INFO Executor: Finished task 1.0 in stage 12.0 (TID 17). 2320 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 17) in 109 ms on localhost (3/4)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 75, boot = 2, init = 41, finish = 32
+16/11/29 03:04:28 INFO Executor: Finished task 2.0 in stage 12.0 (TID 18). 2320 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 2.0 in stage 12.0 (TID 18) in 132 ms on localhost (4/4)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+16/11/29 03:04:28 INFO DAGScheduler: ShuffleMapStage 12 (leftOuterJoin at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:107) finished in 0.134 s
+16/11/29 03:04:28 INFO DAGScheduler: looking for newly runnable stages
+16/11/29 03:04:28 INFO DAGScheduler: running: Set()
+16/11/29 03:04:28 INFO DAGScheduler: waiting: Set(ResultStage 15, ShuffleMapStage 14)
+16/11/29 03:04:28 INFO DAGScheduler: failed: Set()
+16/11/29 03:04:28 INFO DAGScheduler: Missing parents for ResultStage 15: List(ShuffleMapStage 14)
+16/11/29 03:04:28 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List()
+16/11/29 03:04:28 INFO DAGScheduler: Submitting ShuffleMapStage 14 (PairwiseRDD[33] at leftOuterJoin at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:108), which is now runnable
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(14496) called with curMem=856902, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 14.2 KB, free 1059.2 MB)
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(7689) called with curMem=871398, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 7.5 KB, free 1059.2 MB)
+16/11/29 03:04:28 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on localhost:43458 (size: 7.5 KB, free: 1059.4 MB)
+16/11/29 03:04:28 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:28 INFO DAGScheduler: Submitting 6 missing tasks from ShuffleMapStage 14 (PairwiseRDD[33] at leftOuterJoin at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:108)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Adding task set 14.0 with 6 tasks
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 4.0 in stage 14.0 (TID 20, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 5.0 in stage 14.0 (TID 21, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 22, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 1.0 in stage 14.0 (TID 23, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 2.0 in stage 14.0 (TID 24, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO Executor: Running task 4.0 in stage 14.0 (TID 20)
+16/11/29 03:04:28 INFO Executor: Running task 1.0 in stage 14.0 (TID 23)
+16/11/29 03:04:28 INFO Executor: Running task 5.0 in stage 14.0 (TID 21)
+16/11/29 03:04:28 INFO Executor: Running task 0.0 in stage 14.0 (TID 22)
+16/11/29 03:04:28 INFO Executor: Running task 2.0 in stage 14.0 (TID 24)
+16/11/29 03:04:28 INFO BlockManager: Found block rdd_19_0 locally
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 4 non-empty blocks out of 4 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO BlockManager: Found block rdd_19_1 locally
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 4 non-empty blocks out of 4 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 4 non-empty blocks out of 4 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 29, boot = -86, init = 88, finish = 27
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 30, boot = -124, init = 127, finish = 27
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 7, boot = -79, init = 82, finish = 4
+16/11/29 03:04:28 INFO Executor: Finished task 2.0 in stage 14.0 (TID 24). 1443 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 3.0 in stage 14.0 (TID 25, localhost, PROCESS_LOCAL, 2071 bytes)
+16/11/29 03:04:28 INFO Executor: Running task 3.0 in stage 14.0 (TID 25)
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 2.0 in stage 14.0 (TID 24) in 47 ms on localhost (1/6)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 14, boot = 2, init = 2, finish = 10
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 4 non-empty blocks out of 4 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO Executor: Finished task 0.0 in stage 14.0 (TID 22). 1443 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 22) in 53 ms on localhost (2/6)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 13, boot = -110, init = 112, finish = 11
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 13, boot = -116, init = 118, finish = 11
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 28, boot = -11, init = 13, finish = 26
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 66, boot = -82, init = 124, finish = 24
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 68, boot = -87, init = 130, finish = 25
+16/11/29 03:04:28 INFO Executor: Finished task 5.0 in stage 14.0 (TID 21). 2322 bytes result sent to driver
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 5, boot = -32, init = 33, finish = 4
+16/11/29 03:04:28 INFO Executor: Finished task 4.0 in stage 14.0 (TID 20). 2322 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 5.0 in stage 14.0 (TID 21) in 86 ms on localhost (3/6)
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 4.0 in stage 14.0 (TID 20) in 86 ms on localhost (4/6)
+16/11/29 03:04:28 INFO Executor: Finished task 3.0 in stage 14.0 (TID 25). 1443 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 3.0 in stage 14.0 (TID 25) in 41 ms on localhost (5/6)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 94, boot = -105, init = 108, finish = 91
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 105, boot = -25, init = 43, finish = 87
+16/11/29 03:04:28 INFO Executor: Finished task 1.0 in stage 14.0 (TID 23). 1443 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 1.0 in stage 14.0 (TID 23) in 175 ms on localhost (6/6)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool 
+16/11/29 03:04:28 INFO DAGScheduler: ShuffleMapStage 14 (leftOuterJoin at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:108) finished in 0.177 s
+16/11/29 03:04:28 INFO DAGScheduler: looking for newly runnable stages
+16/11/29 03:04:28 INFO DAGScheduler: running: Set()
+16/11/29 03:04:28 INFO DAGScheduler: waiting: Set(ResultStage 15)
+16/11/29 03:04:28 INFO DAGScheduler: failed: Set()
+16/11/29 03:04:28 INFO DAGScheduler: Missing parents for ResultStage 15: List()
+16/11/29 03:04:28 INFO DAGScheduler: Submitting ResultStage 15 (PythonRDD[36] at collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:112), which is now runnable
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(8992) called with curMem=879087, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 8.8 KB, free 1059.2 MB)
+16/11/29 03:04:28 INFO MemoryStore: ensureFreeSpace(5491) called with curMem=888079, maxMem=1111511531
+16/11/29 03:04:28 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 5.4 KB, free 1059.2 MB)
+16/11/29 03:04:28 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on localhost:43458 (size: 5.4 KB, free: 1059.4 MB)
+16/11/29 03:04:28 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:861
+16/11/29 03:04:28 INFO DAGScheduler: Submitting 6 missing tasks from ResultStage 15 (PythonRDD[36] at collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:112)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Adding task set 15.0 with 6 tasks
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 26, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 1.0 in stage 15.0 (TID 27, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 2.0 in stage 15.0 (TID 28, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 3.0 in stage 15.0 (TID 29, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 4.0 in stage 15.0 (TID 30, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO Executor: Running task 0.0 in stage 15.0 (TID 26)
+16/11/29 03:04:28 INFO Executor: Running task 1.0 in stage 15.0 (TID 27)
+16/11/29 03:04:28 INFO Executor: Running task 3.0 in stage 15.0 (TID 29)
+16/11/29 03:04:28 INFO Executor: Running task 2.0 in stage 15.0 (TID 28)
+16/11/29 03:04:28 INFO Executor: Running task 4.0 in stage 15.0 (TID 30)
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 59, boot = -129, init = 131, finish = 57
+16/11/29 03:04:28 INFO Executor: Finished task 0.0 in stage 15.0 (TID 26). 41164 bytes result sent to driver
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 60, boot = -164, init = 168, finish = 56
+16/11/29 03:04:28 INFO TaskSetManager: Starting task 5.0 in stage 15.0 (TID 31, localhost, PROCESS_LOCAL, 1973 bytes)
+16/11/29 03:04:28 INFO Executor: Finished task 4.0 in stage 15.0 (TID 30). 39794 bytes result sent to driver
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 61, boot = -165, init = 168, finish = 58
+16/11/29 03:04:28 INFO Executor: Running task 5.0 in stage 15.0 (TID 31)
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 26) in 65 ms on localhost (1/6)
+16/11/29 03:04:28 INFO Executor: Finished task 2.0 in stage 15.0 (TID 28). 42271 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 4.0 in stage 15.0 (TID 30) in 65 ms on localhost (2/6)
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 2.0 in stage 15.0 (TID 28) in 65 ms on localhost (3/6)
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks
+16/11/29 03:04:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 63, boot = -103, init = 108, finish = 58
+16/11/29 03:04:28 INFO Executor: Finished task 1.0 in stage 15.0 (TID 27). 41327 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 1.0 in stage 15.0 (TID 27) in 68 ms on localhost (4/6)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 92, boot = -102, init = 104, finish = 90
+16/11/29 03:04:28 INFO Executor: Finished task 3.0 in stage 15.0 (TID 29). 254600 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 3.0 in stage 15.0 (TID 29) in 99 ms on localhost (5/6)
+16/11/29 03:04:28 INFO PythonRunner: Times: total = 58, boot = -163, init = 165, finish = 56
+16/11/29 03:04:28 INFO Executor: Finished task 5.0 in stage 15.0 (TID 31). 41267 bytes result sent to driver
+16/11/29 03:04:28 INFO TaskSetManager: Finished task 5.0 in stage 15.0 (TID 31) in 63 ms on localhost (6/6)
+16/11/29 03:04:28 INFO TaskSchedulerImpl: Removed TaskSet 15.0, whose tasks have all completed, from pool 
+16/11/29 03:04:28 INFO DAGScheduler: ResultStage 15 (collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:112) finished in 0.127 s
+16/11/29 03:04:28 INFO DAGScheduler: Job 6 finished: collect at /afs/andrew.cmu.edu/usr4/ttian1/BigML/PhraseFinding/pf.py:112, took 0.473664 s
+16/11/29 03:04:28 INFO SparkUI: Stopped Spark web UI at http://128.2.13.145:4040
+16/11/29 03:04:28 INFO DAGScheduler: Stopping DAGScheduler
+16/11/29 03:04:29 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+16/11/29 03:04:29 INFO MemoryStore: MemoryStore cleared
+16/11/29 03:04:29 INFO BlockManager: BlockManager stopped
+16/11/29 03:04:29 INFO BlockManagerMaster: BlockManagerMaster stopped
+16/11/29 03:04:29 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+16/11/29 03:04:29 INFO SparkContext: Successfully stopped SparkContext
+16/11/29 03:04:29 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+16/11/29 03:04:29 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+16/11/29 03:04:29 INFO RemoteActorRefProvider$RemotingTerminator: Remoting shut down.
+16/11/29 03:04:29 INFO ShutdownHookManager: Shutdown hook called
+16/11/29 03:04:29 INFO ShutdownHookManager: Deleting directory /tmp/spark-5f16afb2-3808-4419-aa37-57df499baa70
